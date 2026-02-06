@@ -373,7 +373,7 @@ body {
       <h1 class="name">贾庆宇</h1>
       <p class="title" style="color:rgba(0,0,0,0.55);">安徽大学 大数据与统计学院</p>
       <p style="color:rgba(0,0,0,0.41);">安徽大学大学生数学建模竞赛协会成员</p>
-      <div class="social-links"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fab fa-qq"></i></a><a href="#"><i class="fab fa-weixin"></i></a><a href="#"><i class="fas fa-envelope"></i></a></div>
+      <div class="social-links"><a href="https://github.com/use1032"><i class="fab fa-github"></i></a><a href="tencent://message/?uin=1032685507"><i class="fab fa-qq"></i></a><a href="maito:w325302058@stu.ahu.edu.cn"><i class="fas fa-envelope"></i></a></div>
     </div>
   </header>
   <div class="container">
@@ -490,14 +490,7 @@ body {
             });
         });
         
-        // 社交链接点击效果
-        document.querySelectorAll('.social-links a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const platform = this.querySelector('i').className.split(' ')[1];
-                alert(`您点击了${getPlatformName(platform)}链接，在实际网页中这里会跳转到相应的个人主页。`);
-            });
-        });
+
         
         function getPlatformName(className) {
             const platformMap = {
