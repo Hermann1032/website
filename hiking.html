@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>数学建模 - 贾庆宇的个人主页</title>
+    <title>户外徒步 - 贾庆宇的个人主页</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI','Microsoft YaHei',sans-serif; }
@@ -32,10 +32,10 @@
         p { font-size:1.1rem; margin-bottom:20px; color:#555; }
         footer { text-align:center; padding:30px 20px; margin-top:50px; background:#333; color:#f1f1f1; border-radius:20px 20px 0 0; }
         @media (max-width:768px) { .name { font-size:1.8rem; } section { padding:30px 20px; } }
-        ul { margin-left:30px; margin-bottom:20px; }
+        ul, ol { margin-left:30px; margin-bottom:20px; }
         li { font-size:1.1rem; color:#555; }
 
-        /* 图片双列样式 */
+        /* 图片画廊样式 */
         .photo-row {
             display: flex;
             gap: 20px;
@@ -46,8 +46,6 @@
             width: calc(50% - 10px);
             border-radius: 16px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-            object-fit: cover;
-            aspect-ratio: 16 / 9;
             transition: transform 0.2s ease;
             border: 2px solid white;
         }
@@ -59,6 +57,32 @@
             .photo-row img { width: 100%; }
         }
 
+        /* 标签样式 */
+        .tag {
+            display: inline-block;
+            background: #e9ecef;
+            border-radius: 30px;
+            padding: 4px 16px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #2c3e50;
+        }
+        .tag i { margin-right: 6px; color: #2a9d8f; }
+
+        /* 引用样式 */
+        .quote {
+            font-style: italic;
+            border-left: 5px solid #2a9d8f;
+            padding-left: 25px;
+            margin: 25px 0;
+            color: #2c3e50;
+            font-size: 1.15rem;
+            background: #f9f9f9;
+            border-radius: 0 30px 30px 0;
+            padding: 15px 25px;
+        }
+
         /* 深色模式样式 */
         body.dark-mode {
             background-color: #121212;
@@ -68,6 +92,7 @@
             background: linear-gradient(135deg, #1a1a2e, #16213e);
             color: #eee;
         }
+        body.dark-mode .name, body.dark-mode .title { color: #fff; }
         body.dark-mode section {
             background-color: #1e1e1e;
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
@@ -78,12 +103,19 @@
         }
         body.dark-mode h2 i { color: #bb86fc; }
         body.dark-mode p, body.dark-mode li { color: #b0b0b0; }
+        body.dark-mode .quote {
+            background: #2d2d2d;
+            color: #ccc;
+            border-left-color: #bb86fc;
+        }
+        body.dark-mode .tag {
+            background: #2d2d2d;
+            color: #ccc;
+        }
+        body.dark-mode .tag i { color: #bb86fc; }
         body.dark-mode footer {
             background-color: #1a1a1a;
             color: #aaa;
-        }
-        body.dark-mode .photo-row img {
-            border-color: #2d2d2d;
         }
 
         /* 主题切换按钮 */
@@ -127,21 +159,33 @@
 
     <div class="container">
         <section>
-            <h2><i class="fas fa-chart-line"></i> 数学建模</h2>
-            <p>数学建模是我热爱的学术活动，它将实际问题转化为数学语言，用算法求解。作为安徽大学数学建模协会成员，我积极参与培训和活动。</p>
+            <h2><i class="fas fa-hiking"></i> 旅行</h2>
+            <p>在紧张的学习之余，我最大的放松方式就是去旅行，感受不同地方的风土人情。</p>
 
             <div class="photo-row">
-                <img src="3.jpg" alt="huangshan" loading="lazy">
+                <img src="3.jpg" loading="lazy">
                 <img src="4.jpg" loading="lazy">
             </div>
 
-            <p><strong>相关竞赛：</strong></p>
+            <div class="quote">
+                <i class="fas fa-quote-left" style="color:#2a9d8f; margin-right:10px;"></i> 人之所以爱旅行，不是为了抵达目的地，而是为了享受旅途中的种种乐趣。——歌德。
+            </div>
+
+            <p><strong>🥾 我的旅行足迹</strong></p>
             <ul>
-                <li>全国大学生数学建模竞赛（预计2026）</li>
-                <li>美国大学生数学建模竞赛（预计2026）</li>
-                <li>计划参加校内数学建模选拔赛</li>
+                <li><i class="fas fa-map-pin" style="color:#e63946;"></i> <strong>西安</strong> —— 感叹秦始皇兵马俑的气势恢宏，享受回民街丰富的民族文化，聆听秦腔千年的荡气回肠。</li>
+                <li><i class="fas fa-map-pin" style="color:#e63946;"></i> <strong>黄山风景区</strong> —— 第一次真正意义上的登山挑战。光明顶的人潮和云海至今难忘。虽然双腿酸痛了三天，但迎客松的坚韧、飞来石的奇绝，让我觉得一切都值得。</li>
+                <li><i class="fas fa-map-pin" style="color:#e63946;"></i> <strong>南京</strong> —— 早就被“江南佳丽地，金陵帝王州”吸引。漫步秦淮河畔，登上中山陵392级台阶，在先锋书店寄一张明信片，在梧桐大道上漫步，感受着六朝古都的气息。</li>
             </ul>
-            <p>我们协会定期组织讨论活动哦，欢迎有兴趣的同学加入！</p>
+
+            <p><strong>🎯 未来旅行</strong></p>
+            <ul>
+                <li><i class="fas fa-flag-checkered" style="color:#2a9d8f;"></i> <strong>香港澳门</strong> —— 想感受中西方文化的碰撞：在维多利亚港看夜景，爬太平山俯瞰港岛；去澳门感受一次纸醉金迷，品尝正宗的葡式蛋挞。还想体验一次天星小轮和叮叮车。</li>
+                <li><i class="fas fa-flag-checkered" style="color:#2a9d8f;"></i> <strong>新疆</strong> —— 被喀纳斯的秋色、禾木村的晨雾、赛里木湖的蓝种草。想尝试一次草原露营，在帐篷里看满天繁星，白天骑马穿行在雪山脚下。</li>
+                <li><i class="fas fa-flag-checkered" style="color:#2a9d8f;"></i> <strong>北京</strong> —— 想去故宫感受六百年历史，爬长城做好汉，逛胡同吃烤鸭。如果运气好，希望能看一次升旗仪式，也想去首钢园看看工业遗存的改造。</li>
+            </ul>
+
+            <p>如果你也喜欢旅行，或者有私藏的绝美路线，欢迎随时交流！有机会可以一起出发。</p>
         </section>
     </div>
 
@@ -163,6 +207,7 @@
             const icon = themeToggle.querySelector('i');
             const body = document.body;
 
+            // 读取本地存储
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 body.classList.add('dark-mode');
@@ -185,6 +230,4 @@
         })();
     </script>
 </body>
-
 </html>
-
